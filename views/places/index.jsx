@@ -18,7 +18,7 @@ function index (data) {
       </div>
     )
   })
-  
+                                              //have to make a table// 
   return (
     <Def>
         <main>
