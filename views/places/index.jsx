@@ -6,8 +6,8 @@ const Def = require('../default')
 function index (data) {
   let placesFormatted = data.places.map((place) => {
     return (
-      <div className="col-sm-6">
-        <h2>{place.name}</h2>
+      <div className=" rant col-sm-6">
+        <h2 key={index}>{place.name}</h2>
         <p className="text-center">
           {place.cuisines}
         </p>
@@ -18,7 +18,7 @@ function index (data) {
       </div>
     )
   })
-                                              //have to make a table// 
+                                              
   return (
     <Def>
         <main>

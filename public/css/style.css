@@ -8,3 +8,11 @@ h1 {
     border:cornflowerblue;
     color: white;
 }
+
+.rant{
+  display:  flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
