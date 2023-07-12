@@ -1,10 +1,10 @@
 const router  = require('express').Router()
+// const db = require('../models')
 
 
-
-router.get('/', (req, res) => {
-  res.render('places/new')
-});
+//router.get('/', (req, res) => {
+  //res.render('places/index')
+//});
 
 router.get('/', (req, res) => {
     let places = [{
@@ -12,13 +12,13 @@ router.get('/', (req, res) => {
         city: 'Seattle',
         state: 'WA',
         cuisines: 'Thai, Pan-Asian',
-        pic: '/images/restaurant1.jpg',
+        pic: './images/restaurants1.jpg',
       }, {
         name: 'Coding Cat Cafe',
         city: 'Phoenix',
         state: 'AZ',
         cuisines: 'Coffee, Bakery',
-        pic: '/images/restaurant2.jpg',
+        pic: '/images/restaurants2.jpg',
       }]
     res.render('places/index', {places})
       
@@ -27,3 +27,4 @@ router.get('/', (req, res) => {
 
 
 module.exports = router
+ 
