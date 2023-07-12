@@ -1,6 +1,7 @@
 h1 {
     text-align: center;
     color: cornflowerblue;
+    background-color:lightskyblue
   }
 
 .btn-primary{
@@ -14,5 +15,10 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+img{
+  height: 500px;
+  width: 500px;
 }
 
