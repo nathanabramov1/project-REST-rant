@@ -55,7 +55,12 @@ body {
 main {
   margin-right: 20px;
   margin-left: 20px;
+  padding: 2em;
   background-color: white;
 }
 
-
+.edit-controls {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
