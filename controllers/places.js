@@ -39,7 +39,7 @@ router.delete('/:id', (req, res) => {
   }                             //i dont know if this section is even right
 })
 
-
+ 
   router.post('/', (req, res) => {
     console.log(req.body)               //have a situation with step 5 part 2 of rest rant part 5
     if (!req.body.pic) {
@@ -58,19 +58,19 @@ router.delete('/:id', (req, res) => {
 
 
 router.get('/', (req, res) => {
-    let places = [{
-        name: 'H-Thai-ML',
-        city: 'Seattle',
-        state: 'WA',
-        cuisines: 'Thai, Pan-Asian',
-        pic: './images/restaurants1.jpg',
-      }, {
-        name: 'Coding Cat Cafe',
-        city: 'Phoenix',
-        state: 'AZ',
-        cuisines: 'Coffee, Bakery',
-        pic: '/images/restaurants2.jpg',
-      }]
+    //let places = [{
+      //  name: 'H-Thai-ML',
+      //  city: 'Seattle',
+      //  state: 'WA',
+      //  cuisines: 'Thai, Pan-Asian',
+      //   pic: './images/restaurants1.jpg',
+      // }, {
+      //   name: 'Coding Cat Cafe',
+      //   city: 'Phoenix',
+      //   state: 'AZ',
+      //   cuisines: 'Coffee, Bakery',
+      //   pic: '/images/restaurants2.jpg',
+      // }]
     res.render('places/index', {places})
       
 })
