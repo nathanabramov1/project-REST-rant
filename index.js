@@ -26,7 +26,4 @@ app.get('*', (req, res) => {
 
 app.listen(process.env.PORT)
    
-//still have to style the show.jsx page
-
-//i get the error cannot find 'method-override'
-//i tried installing npm install method-override and it gave me errors  
+//got errors when intalling mongoose  
