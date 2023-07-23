@@ -12,3 +12,6 @@ const placeSchema = new mongoose.Schema({
     max: [new Date().getFullYear(), 'Hey, this year is in the future!']
   }
 })
+const Place = mongoose.model('Place', placeSchema)
+
+module.exports = Place
