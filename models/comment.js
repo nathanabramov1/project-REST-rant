@@ -1,4 +1,4 @@
-const mongoose = require('mongoose') //when i run node seeders it says cant find ./models
+const mongoose = require('mongoose')
 
 let commentSchema = new mongoose.Schema({
     author: { type: String, default: 'Anonymous' },
@@ -8,7 +8,4 @@ let commentSchema = new mongoose.Schema({
 })
   
 module.exports = mongoose.model('Comment', commentSchema)
-
-const Place = mongoose.model('Place', placeSchema)
-
-module.exports = Place 
+    
