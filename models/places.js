@@ -9,6 +9,6 @@ let commentSchema = new mongoose.Schema({
   
 module.exports = mongoose.model('Comment', commentSchema)
 
-const Place = mongoose.model('Place', placeSchema)
+const Place = mongoose.model('Place', PlaceSchema)
 
-module.exports = Place 
+module.exports = Place  

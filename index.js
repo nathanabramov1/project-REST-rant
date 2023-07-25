@@ -26,4 +26,4 @@ app.get('*', (req, res) => {
 
 app.listen(process.env.PORT)
    
-//got errors when intalling mongoose  
+//says PlaceSchema is not defined
