@@ -49,19 +49,22 @@ router.post('/:id/comment', (req, res) => {
   })
 })
 
-// router.get('/:id', (req, res) => {
-//   db.Place.findById(req.params.id)
-//   .populate('comments')
-//   .then(place => {
-//       console.log(place.comments)
-//       res.render('places/show', { place })
-//   })
-//   .catch(err => {
-//       console.log('err', err)
-//       res.render('error404')
-//   })
-// })                                        dont know where to put step 7 on part 3
-
+ router.get('/:id', (req, res) => {
+   db.Place.findById(req.params.id)
+   .populate('comments')
+   .then(place => {
+       console.log(place.comments)
+       res.render('places/show', { place })
+   })
+   .catch(err => {
+       console.log('err', err)
+       res.render('error404')
+   })
+ })  
+ 
+  router.get('/new', (req, res) => {
+   res.render('places/new')
+   })
 
 router.put('/:id', (req, res) => {
   db.Place.findByIdAndUpdate(req.params.id, req.body)

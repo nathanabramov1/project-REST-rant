@@ -9,7 +9,8 @@ function show (data) {
   )
   let rating = (
     <h3 className="inactive">
-      {Math.round(averageRating) } stars
+      console.log(data.comment.rant)
+      {Math.round(data.comment.rant) } stars
       </h3>
   )
   if (data.place.comments.length) {

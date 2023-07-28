@@ -1,14 +1,22 @@
 const mongoose = require('mongoose') //when i run node seeders it says cant find ./models
 
-let commentSchema = new mongoose.Schema({
-    author: { type: String, default: 'Anonymous' },
-    rant: { type: Boolean, default: false },
-    stars: { type: Number, required: true },
-    content: { type: String, default: '' }
-})
+
+const placeSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    pic: { type: String, default: 'http://placekitten.com/350/350'},
+    cuisines: { type: String, required: true },
+    city: { type: String, default: 'Anytown' },
+    state: { type: String, default: 'USA' },
+    founded: {
+      type: Number,
+      min: [1673, 'Surely not that old?!'],
+      max: [new Date().getFullYear(), 'This year hasn\'t happened yet!']
+    },
+    comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }]
+  })
   
-module.exports = mongoose.model('Comment', commentSchema)
+  placeSchema.methods.showEstablished = function() {
+    return `${this.name} has been serving ${this.city}, ${this.state} since ${this.founded}.`
+  }
 
-const Place = mongoose.model('Place', PlaceSchema)
-
-module.exports = Place  
+module.exports = mongoose.model('Place', placeSchema)
